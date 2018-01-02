@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { inject, observer } from 'mobx-react';
 import  Clock  from './Clock';
 import  Head from './Head';
-const core_scss = require( '../scss/core.scss');
+import  Nav from './Nav';
 
 @inject('store') @observer
 class Page extends React.Component<any, any> {
@@ -21,12 +21,17 @@ class Page extends React.Component<any, any> {
     return (
       <div>
       <Head></Head>
-      <style>{core_scss}</style>
-        <h1>{this.props.title}</h1>
-        <Clock lastUpdate={this.props.store.lastUpdate} light={this.props.store.light} />
-        <nav>
+      
+      {/*<body>*/}
+      <Nav></Nav>
+      {this.props.children}
+        {/*<h1>{this.props.title}</h1>*/}
+        {/*<Clock lastUpdate={this.props.store.lastUpdate} light={this.props.store.light} />*/}
+        {/*<nav>
           <Link href={this.props.linkTo}><a>Navigate</a></Link>
-        </nav>
+        </nav>*/}
+       {/*</body>*/}
+       
       </div>
     )
   }

@@ -15,10 +15,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import * as React from 'react';
-import Link from 'next/link';
 import { inject, observer } from 'mobx-react';
 import Head from './Head';
-var core_scss = require('../scss/core.scss');
+import Nav from './Nav';
 var Page = (function (_super) {
     __extends(Page, _super);
     function Page() {
@@ -33,11 +32,8 @@ var Page = (function (_super) {
     Page.prototype.render = function () {
         return (React.createElement("div", null,
             React.createElement(Head, null),
-            React.createElement("style", null, core_scss),
-            React.createElement("h1", null, this.props.title),
-            React.createElement("nav", null,
-                React.createElement(Link, { href: this.props.linkTo },
-                    React.createElement("a", null, "Navigate")))));
+            React.createElement(Nav, null),
+            this.props.children));
     };
     Page = __decorate([
         inject('store'), observer

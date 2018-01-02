@@ -3,7 +3,7 @@ export default (props: any) => {
   return (
     <div className={props.light ? 'light' : ''}>
       {format(new Date(props.lastUpdate))}
-      <style>{`
+{/*      <style>{`
         div {
           padding: 15px;
           color: #82FA58;
@@ -15,7 +15,7 @@ export default (props: any) => {
         .light {
           background-color: #999;
         }
-      `}</style>
+      `}</style>*/}
     </div>
   )
 }

@@ -9,7 +9,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import * as React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 var default_1 = (function (_super) {
     __extends(default_1, _super);
     function default_1(props) {
@@ -34,16 +34,7 @@ var default_1 = (function (_super) {
                 React.createElement(Collapse, { isOpen: this.state.isOpen, navbar: true },
                     React.createElement(Nav, { className: "ml-auto", navbar: true },
                         React.createElement(NavItem, null,
-                            React.createElement(NavLink, { href: "/components/" }, "Components")),
-                        React.createElement(NavItem, null,
-                            React.createElement(NavLink, { href: "https://github.com/reactstrap/reactstrap" }, "Github")),
-                        React.createElement(UncontrolledDropdown, null,
-                            React.createElement(DropdownToggle, { nav: true, caret: true }, "Options"),
-                            React.createElement(DropdownMenu, null,
-                                React.createElement(DropdownItem, null, "Option 1"),
-                                React.createElement(DropdownItem, null, "Option 2"),
-                                React.createElement(DropdownItem, { divider: true }),
-                                React.createElement(DropdownItem, null, "Reset"))))))));
+                            React.createElement(NavLink, { href: "https://github.com/inkcarve" }, "Github")))))));
     };
     return default_1;
 }(React.Component));

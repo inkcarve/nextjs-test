@@ -16,8 +16,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import * as React from 'react';
 import { inject, observer } from 'mobx-react';
-import Head from './Head';
-import Nav from './Nav';
 var Page = (function (_super) {
     __extends(Page, _super);
     function Page() {
@@ -30,10 +28,7 @@ var Page = (function (_super) {
         this.props.store.stop();
     };
     Page.prototype.render = function () {
-        return (React.createElement("div", null,
-            React.createElement(Head, null),
-            React.createElement(Nav, null),
-            this.props.children));
+        return (React.createElement("div", null, this.props.children));
     };
     Page = __decorate([
         inject('store'), observer

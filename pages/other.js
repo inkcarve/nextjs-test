@@ -11,7 +11,8 @@ var __extends = (this && this.__extends) || (function () {
 import * as React from 'react';
 import { Provider } from 'mobx-react';
 import { initStore } from '../store/store';
-import Page from '../components/Page';
+import Head from '../components/Head';
+import Nav from '../components/Nav';
 var Counter = (function (_super) {
     __extends(Counter, _super);
     function Counter(props) {
@@ -27,7 +28,11 @@ var Counter = (function (_super) {
     };
     Counter.prototype.render = function () {
         return (React.createElement(Provider, { store: this.store },
-            React.createElement(Page, { title: 'Other 2', linkTo: '/' })));
+            React.createElement("div", null,
+                React.createElement(Head, null),
+                React.createElement(Nav, null),
+                React.createElement("div", { className: "container" },
+                    React.createElement("h1", null, "React + NextJs + reactstrap")))));
     };
     return Counter;
 }(React.Component));

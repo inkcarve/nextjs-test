@@ -13,7 +13,6 @@ import { Provider } from 'mobx-react';
 import { initStore } from '../store/store';
 import Head from '../components/Head';
 import Nav from '../components/Nav';
-var core_scss = require('../scss/core.scss');
 var Index = (function (_super) {
     __extends(Index, _super);
     function Index(props) {
@@ -31,7 +30,6 @@ var Index = (function (_super) {
         return (React.createElement(Provider, { store: this.store },
             React.createElement("div", null,
                 React.createElement(Head, null),
-                React.createElement("style", null, core_scss),
                 React.createElement(Nav, null),
                 React.createElement("div", { className: "container" },
                     React.createElement("h1", null, "React + NextJs + reactstrap")))));

@@ -68,13 +68,13 @@ export default class extends React.Component<any, any>{
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              {/*<NavItem>
+                <NavLink href="/other">Other</NavLink>
+              </NavItem>*/}
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="https://github.com/inkcarve">Github</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
-              </NavItem>
-              <UncontrolledDropdown >
+              {/*<UncontrolledDropdown >
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
@@ -90,7 +90,7 @@ export default class extends React.Component<any, any>{
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown>*/}
             </Nav>
           </Collapse>
         </Navbar>

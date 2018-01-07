@@ -20,10 +20,10 @@ class Page extends React.Component<any, any> {
   render () {
     return (
       <div>
-      <Head></Head>
+      {/*<Head></Head>*/}
       
       {/*<body>*/}
-      <Nav></Nav>
+      {/*<Nav></Nav>*/}
       {this.props.children}
         {/*<h1>{this.props.title}</h1>*/}
         {/*<Clock lastUpdate={this.props.store.lastUpdate} light={this.props.store.light} />*/}

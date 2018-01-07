@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Provider } from 'mobx-react'
-import { initStore } from '../store/store'
-import Page from '../components/Page'
-
+import * as React from 'react';
+import { Provider } from 'mobx-react';
+import { initStore } from '../store/store';
+import Head from '../components/Head';
+import Nav from '../components/Nav';
 export default class Counter extends React.Component<any, any> {
   private store:any;
   static getInitialProps ({ req }) {
@@ -19,7 +19,14 @@ export default class Counter extends React.Component<any, any> {
   render () {
     return (
       <Provider store={this.store}>
-        <Page title='Other 2' linkTo='/' />
+      <div>
+      <Head></Head>
+      <Nav></Nav>
+      <div className="container">
+        {/*<Page title='' linkTo='/other' />*/}
+        <h1>React + NextJs + reactstrap</h1>
+      </div>
+      </div>
       </Provider>
     )
   }

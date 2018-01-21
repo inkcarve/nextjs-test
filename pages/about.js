@@ -13,32 +13,29 @@ import { Provider } from 'mobx-react';
 import { initStore } from '../store/store';
 import Head from '../components/Head';
 import Nav from '../components/Nav';
-var Index = (function (_super) {
-    __extends(Index, _super);
-    function Index(props) {
+var Counter = (function (_super) {
+    __extends(Counter, _super);
+    function Counter(props) {
         var _this = _super.call(this, props) || this;
         _this.store = initStore(props.isServer, props.lastUpdate);
         return _this;
     }
-    Index.getInitialProps = function (_a) {
+    Counter.getInitialProps = function (_a) {
         var req = _a.req;
         var isServer = !!req;
         var store = initStore(isServer);
         return { lastUpdate: store.lastUpdate, isServer: isServer };
     };
-    Index.prototype.render = function () {
+    Counter.prototype.render = function () {
         return (React.createElement(Provider, { store: this.store },
             React.createElement("div", null,
                 React.createElement(Head, null),
                 React.createElement(Nav, null),
-                React.createElement("section", { className: "header" },
-                    React.createElement("div", { className: "container-fluid" },
-                        React.createElement("div", { className: "embed-responsive embed-responsive-16by9" },
-                            React.createElement("video", { autoPlay: true, loop: true, className: "embed-responsive-item" },
-                                React.createElement("source", { src: "static/video/Lamp-small.mp4", type: "video/mp4" }),
-                                "Your browser does not support the video tag.")))))));
+                React.createElement("div", { className: "main" },
+                    React.createElement("div", { className: "container mt-3" },
+                        React.createElement("h1", null, "React + NextJs + reactstrap + typescript + bootstrap4"))))));
     };
-    return Index;
+    return Counter;
 }(React.Component));
-export default Index;
-//# sourceMappingURL=index.js.map
+export default Counter;
+//# sourceMappingURL=about.js.map

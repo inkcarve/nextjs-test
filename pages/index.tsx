@@ -25,10 +25,19 @@ export default class Index extends React.Component {
       <div>
       <Head></Head>
       <Nav></Nav>
-      <div className="container">
+      <section className="header">
+      <div className="container-fluid">
         {/*<Page title='' linkTo='/other' />*/}
-        <h1>React + NextJs + reactstrap</h1>
+        
+        <div className="embed-responsive embed-responsive-16by9">
+        <video autoPlay loop className="embed-responsive-item">
+          <source src="static/video/Lamp-small.mp4" type="video/mp4"></source>
+          {/*<source src="movie.ogg" type="video/ogg">*/}
+          Your browser does not support the video tag.
+        </video>
+        </div>
       </div>
+      </section>
       </div>
       </Provider>
     )

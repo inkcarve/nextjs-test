@@ -63,14 +63,14 @@ export default class extends React.Component<any, any>{
   public render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
+        <Navbar className="fixed-top" color="faded" light expand="md">
           <NavbarBrand href="/">Next-Test</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              {/*<NavItem>
-                <NavLink href="/other">Other</NavLink>
-              </NavItem>*/}
+              {<NavItem>
+                <NavLink href="/about">About</NavLink>
+              </NavItem>}
               <NavItem>
                 <NavLink href="https://github.com/inkcarve">Github</NavLink>
               </NavItem>

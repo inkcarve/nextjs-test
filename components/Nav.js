@@ -28,11 +28,13 @@ var default_1 = (function (_super) {
     };
     default_1.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(Navbar, { color: "faded", light: true, expand: "md" },
+            React.createElement(Navbar, { className: "fixed-top", color: "faded", light: true, expand: "md" },
                 React.createElement(NavbarBrand, { href: "/" }, "Next-Test"),
                 React.createElement(NavbarToggler, { onClick: this.toggle }),
                 React.createElement(Collapse, { isOpen: this.state.isOpen, navbar: true },
                     React.createElement(Nav, { className: "ml-auto", navbar: true },
+                        React.createElement(NavItem, null,
+                            React.createElement(NavLink, { href: "/about" }, "About")),
                         React.createElement(NavItem, null,
                             React.createElement(NavLink, { href: "https://github.com/inkcarve" }, "Github")))))));
     };

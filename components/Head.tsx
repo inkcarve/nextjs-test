@@ -6,7 +6,7 @@ const core_scss = require( '../scss/core.scss');
 export default () => (
   <div>
     <Head>
-      <title>My styled page</title>
+      <title>Next Test</title>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       {/*<meta name="description" content={description} />*/}

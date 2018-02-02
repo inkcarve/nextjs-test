@@ -5,10 +5,10 @@
     "dev": "set NODE_ENV=dev && concurrently \"tsc --pretty --watch\" \"nodemon ./server/server.js\" ",
     "prebuild": "yarn tsc",
     "build": "next build",
-    "start": "set NODE_ENV=production && node server.js"
+    "start": "set NODE_ENV=production && node server/server.js"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "^4.0.0",
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "mobx": "^2.7.0",
@@ -19,7 +19,7 @@
     "react-bootstrap-4": "^0.29.1",
     "react-dom": "^16.2.0",
     "react-transition-group": "^2.2.1",
-    "reactstrap": "^5.0.0-alpha.4",
+    "reactstrap": "^4.8.0",
     "types": "^0.1.1",
     "typescript": "^2.6.2"
   },
@@ -29,7 +29,7 @@
     "@types/next": "^2.4.6",
     "@types/node": "^8.5.1",
     "@types/node-sass": "^3.10.32",
-    "@types/reactstrap": "^5.0.6",
+    "@types/reactstrap": "^5.0.12",
     "babel-plugin-inline-import": "^2.0.6",
     "babel-plugin-module-resolver": "^3.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",

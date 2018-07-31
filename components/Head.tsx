@@ -3,10 +3,14 @@ import Head from 'next/head';
 const core_scss = require( '../scss/core.scss');
 
 // const core_scss = require( '../scss/core.scss');
-export default () => (
-  <div>
+export default class HeadCustom extends React.Component<any, any>{
+    constructor (props:any) {
+    super(props)
+  }
+render () {
+  return (
     <Head>
-      <title>Next Test</title>
+      <title>Next - {this.props.title}</title>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       {/*<meta name="description" content={description} />*/}
@@ -14,5 +18,7 @@ export default () => (
       <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
       <style>{core_scss}</style>
     </Head>
-  </div>
+  
 )
+}
+}

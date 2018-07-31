@@ -21,5 +21,6 @@ module.exports = {
     return config
   },
   pagesDirectory:'/pages',
-  useFileSystemPublicRoutes: true // default true
+  useFileSystemPublicRoutes: true, // default true
+
 }

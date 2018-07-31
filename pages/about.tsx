@@ -3,6 +3,7 @@ import { Provider } from 'mobx-react';
 import { initStore } from '../store/store';
 import Head from '../components/Head';
 import Nav from '../components/Nav';
+import Page from '../components/Page'
 export default class Counter extends React.Component<any, any> {
   private store:any;
   static getInitialProps ({ req }) {
@@ -19,9 +20,10 @@ export default class Counter extends React.Component<any, any> {
   render () {
     return (
       <Provider store={this.store}>
+      <Page title='about' linkTo='/about' >
       <div>
-      <Head></Head>
-      <Nav></Nav>
+{/*      <Head></Head>
+      <Nav></Nav>*/}
       <div className="main">
       <div className="container mt-3">
         {/*<Page title='' linkTo='/other' />*/}
@@ -29,6 +31,7 @@ export default class Counter extends React.Component<any, any> {
       </div>
       </div>
       </div>
+      </Page>
       </Provider>
     )
   }

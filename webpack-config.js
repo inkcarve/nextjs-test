@@ -14,6 +14,7 @@ const scssCopyToPath = path.resolve('./', './ts-dist/scss');
 console.log(scssPath);
 
 const config = {
+    devtool: (env=='production'?'hidden-source-map':'inline-source-map'),
     entry: {
         'main': '/src/pages/index.tsx'
     },
@@ -34,7 +35,9 @@ const config = {
         }
     },
     module: {
-        rules: [ {
+        rules: [
+        { test: /\.tsx?$/, loader: 'ts-loader' },
+        {
                 test: /\.(png|jpg|gif|woff|woff2|svg|ttf|eot)$/,
                 loaders: [
                     'file-loader?name=dist/file/[name]-[hash:6].[ext]',
@@ -79,49 +82,76 @@ const config = {
                 test: /favicon.ico$/,
                 loader: 'file-loader?name=/[name].[ext]'
             },
-            {
-        test: /\.(css|scss)/,
-        loader: 'emit-file-loader',
-        options: {
-          name: 'dist/[path][name].[ext]',
-        },
-      },
+      //       {
+      //   test: /\.(css|scss)/,
+      //   loader: 'emit-file-loader',
+      //   options: {
+      //     name: 'static/css/[path][name].[ext]',
+      //   },
+      // },
       
-       {
-                test: /\.css$/,
+       // {
+       //          test: /\.css$/,
         
-                use: [
+       //          // use: [
 
-                        'babel-loader',
-                        'raw-loader',
-                        {
-                            loader: 'postcss-loader',
-                            options: { sourceMap: env !== 'production' }
-                        }
-                    ]
-            }, {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                use: [
-                        'babel-loader',
-                        'raw-loader',
-                        {
-                            loader: 'postcss-loader',
-                            options: { sourceMap: env !== 'production' }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: env !== 'production',
-              includePaths: ['scss', 'node_modules']
-                .map((d) => path.join(__dirname, d))
-                .map((g) => glob.sync(g))
-                .reduce((a, c) => a.concat(c), [])
-            }
-                        },
-                    ]
+       //          //         'babel-loader',
+       //          //         'raw-loader',
+       //          //         {
+       //          //             loader: 'postcss-loader',
+       //          //             options: { sourceMap: env !== 'production' }
+       //          //         }
+       //          //     ]
+       //          use:ExtractTextPlugin.extract({
+       //      fallback:'style-loader',
+       //      use:[{loader:'css-loader',
+       //      options:{
+       //          sourceMap:env!=='production'
+       //      }
+       //      }, 
+       //      {loader:'postcss-loader',
+       //      options:{sourceMap:env!=='production'}
+       //      }
+       //      ]})
+       //      }, {
+       //          test: /\.scss$/,
+       //          exclude: /node_modules/,
+       //      //     use: [
+       //      //             'babel-loader',
+       //      //             'raw-loader',
+       //      //             {
+       //      //                 loader: 'postcss-loader',
+       //      //                 options: { sourceMap: env !== 'production' }
+       //      //             },
+       //      //             {
+       //      //                 loader: 'sass-loader',
+       //      //                 options: {
+       //      //                     sourceMap: env !== 'production',
+       //      //   includePaths: ['scss', 'node_modules']
+       //      //     .map((d) => path.join(__dirname, d))
+       //      //     .map((g) => glob.sync(g))
+       //      //     .reduce((a, c) => a.concat(c), [])
+       //      // }
+       //      //             },
+       //      //         ]
+       //      use:ExtractTextPlugin.extract({
+       //      fallback:'style-loader',
+       //      use:[
+       //      {loader:'css-loader',
+       //      options:{
+       //          sourceMap:env!=='production'
+       //      }
+       //      }, 
+       //      {loader:'postcss-loader',
+       //      options:{sourceMap:env!=='production'}
+       //      }, 
+       //      {loader:'sass-loader',
+       //      options:{sourceMap:env!=='production',
+       //      outputStyle:env!=='production'?'expanded':'compressed'}
+       //      }
+       //      ]})
 
-            },
+       //      },
         ]
     },
     plugins: [

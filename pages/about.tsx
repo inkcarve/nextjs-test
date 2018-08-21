@@ -20,7 +20,7 @@ export default class Counter extends React.Component<any, any> {
   render () {
     return (
       <Provider store={this.store}>
-      <Page title='about' linkTo='/about' >
+      {/*<Page title='about' linkTo='/about' >*/}
       <div>
 {/*      <Head></Head>
       <Nav></Nav>*/}
@@ -31,7 +31,7 @@ export default class Counter extends React.Component<any, any> {
       </div>
       </div>
       </div>
-      </Page>
+      {/*</Page>*/}
       </Provider>
     )
   }

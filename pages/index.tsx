@@ -22,10 +22,9 @@ export default class Index extends React.Component<any, any> {
   render () {
     return (
       <Provider store={this.store}>
-      <Page title='index' linkTo='/other' >
+      {/*<Page title='index' linkTo='/other' >*/}
       <div>
-{/*      <Head></Head>
-      <Nav></Nav>*/}
+
       <section className="header">
       <div className="container-fluid">
         {/*<Page title='' linkTo='/other' />*/}
@@ -44,7 +43,7 @@ export default class Index extends React.Component<any, any> {
       </div>
       </section>
       </div>
-      </Page>
+
       </Provider>
     )
   }

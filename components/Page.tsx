@@ -7,7 +7,7 @@ import  Clock  from './Clock';
 import  Head from './Head';
 import  Nav from './Nav';
 
-@inject('store') @observer
+
 class Page extends React.Component<any, any> {
   componentDidMount () {
     this.props.store.start()
@@ -20,20 +20,20 @@ class Page extends React.Component<any, any> {
   render () {
     console.log(this)
     return (
-      <div>
-      <Head {...this.props}></Head>
+     <div>
+      {/*<Head {...this.props}></Head>
       
       <body>
-      <Nav></Nav>
+      <Nav></Nav>*/}
       {this.props.children}
         {/*<h1>{this.props.title}</h1>*/}
         {/*<Clock lastUpdate={this.props.store.lastUpdate} light={this.props.store.light} />*/}
         {/*<nav>
           <Link href={this.props.linkTo}><a>Navigate</a></Link>
         </nav>*/}
-       </body>
-       
+       {/*</body>*/}
       </div>
+      
     )
   }
 }

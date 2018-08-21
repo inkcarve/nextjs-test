@@ -1,8 +1,12 @@
 const  webpackConfig = require("./webpack-config.js");
 const _path = require("path");
+const withSass = require('@zeit/next-sass')
+// module.exports = withSass({
+//   cssModules: true
+// })
 // const pagePath = (0, _path.resolve)('./', 'dist/pages');
-module.exports = {
-  webpack: (config, { buildId, dev }) => {
+module.exports = withSass({
+  webpack(config, { buildId, dev }){
   	
   	// console.log(config.module.rules);
   	// config.entry=webpackConfig.entry;
@@ -22,5 +26,6 @@ module.exports = {
   },
   pagesDirectory:'/pages',
   useFileSystemPublicRoutes: true, // default true
+// cssModules: true,
 
-}
+})

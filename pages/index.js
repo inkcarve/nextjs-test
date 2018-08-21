@@ -11,7 +11,6 @@ var __extends = (this && this.__extends) || (function () {
 import * as React from 'react';
 import { Provider } from 'mobx-react';
 import { initStore } from '../store/store';
-import Page from '../components/Page';
 var Index = (function (_super) {
     __extends(Index, _super);
     function Index(props) {
@@ -27,16 +26,15 @@ var Index = (function (_super) {
     };
     Index.prototype.render = function () {
         return (React.createElement(Provider, { store: this.store },
-            React.createElement(Page, { title: 'index', linkTo: '/other' },
-                React.createElement("div", null,
-                    React.createElement("section", { className: "header" },
-                        React.createElement("div", { className: "container-fluid" },
-                            React.createElement("div", { className: "row justify-content-center" },
-                                React.createElement("div", { className: "col-offset-lg-2 col-lg-8" },
-                                    React.createElement("div", { className: "embed-responsive embed-responsive-16by9" },
-                                        React.createElement("video", { autoPlay: true, loop: true, className: "embed-responsive-item", controls: true },
-                                            React.createElement("source", { src: "static/video/Lamp-small.mp4", type: "video/mp4" }),
-                                            "Your browser does not support the video tag."))))))))));
+            React.createElement("div", null,
+                React.createElement("section", { className: "header" },
+                    React.createElement("div", { className: "container-fluid" },
+                        React.createElement("div", { className: "row justify-content-center" },
+                            React.createElement("div", { className: "col-offset-lg-2 col-lg-8" },
+                                React.createElement("div", { className: "embed-responsive embed-responsive-16by9" },
+                                    React.createElement("video", { autoPlay: true, loop: true, className: "embed-responsive-item", controls: true },
+                                        React.createElement("source", { src: "static/video/Lamp-small.mp4", type: "video/mp4" }),
+                                        "Your browser does not support the video tag.")))))))));
     };
     return Index;
 }(React.Component));

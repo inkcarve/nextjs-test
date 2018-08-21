@@ -9,14 +9,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import * as React from 'react';
-import Head from 'next/head';
-var core_scss = require('../scss/core.scss');
+import { Head } from 'next/document';
 var HeadCustom = (function (_super) {
     __extends(HeadCustom, _super);
     function HeadCustom(props) {
         return _super.call(this, props) || this;
     }
     HeadCustom.prototype.render = function () {
+        console.log("headcustom");
         return (React.createElement(Head, null,
             React.createElement("title", null,
                 "Next - ",
@@ -25,7 +25,7 @@ var HeadCustom = (function (_super) {
             React.createElement("meta", { httpEquiv: "x-ua-compatible", content: "ie=edge" }),
             React.createElement("meta", { name: "viewport", content: "initial-scale=1.0, width=device-width" }),
             React.createElement("link", { href: "static/bootstrap/css/bootstrap.min.css", rel: "stylesheet" }),
-            React.createElement("style", null, core_scss)));
+            React.createElement("link", { rel: "stylesheet", href: "/_next/static/style.css" })));
     };
     return HeadCustom;
 }(React.Component));
